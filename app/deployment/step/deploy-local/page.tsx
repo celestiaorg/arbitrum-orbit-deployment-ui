@@ -67,10 +67,10 @@ export default function DeployLocallyPage() {
         <li>
           Clone the{' '}
           <ExternalLink
-            href="https://github.com/OffchainLabs/orbit-setup-script"
+            href="https://github.com/celestiaorg/orbit-setup-script"
             className="underline"
           >
-            https://github.com/OffchainLabs/orbit-setup-script
+            https://github.com/celestiaorg/orbit-setup-script
           </ExternalLink>{' '}
           repository, and run:
           <br />
