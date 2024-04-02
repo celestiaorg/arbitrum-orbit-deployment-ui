@@ -1,7 +1,7 @@
 'use client';
 
 import { useAccount, usePublicClient, useWalletClient } from 'wagmi';
-import { setValidKeyset } from 'orbit-sdk-celestia';
+import { setValidKeyset } from 'celestia-orbit-sdk';
 
 import { useStep } from '@/hooks/useStep';
 import { assertIsAddress } from '@/utils/validators';

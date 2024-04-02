@@ -8,7 +8,7 @@ import {
   createRollupPrepareTransactionRequest,
   createRollupPrepareTransactionReceipt,
   CelestiaConfig
-} from 'orbit-sdk-celestia';
+} from 'celestia-orbit-sdk';
 
 import { ChainType } from '@/types/ChainType';
 import { Wallet } from '@/types/RollupContracts';
@@ -111,19 +111,6 @@ export async function deployRollup({
 
     const coreContracts = txReceipt.getCoreContracts();
 
-    if (chainType === ChainType.CelestiaDA) {
-      console.log("Its CELESTIA DA BABY")
-      if (celestiaConfig) {
-        celestiaConfig.enable = true;
-        celestiaConfig.rpc = 'http://localhost:26658';
-        celestiaConfig.tendermint_rpc = 'rpc.celestia-mocha.com';
-        celestiaConfig.namespace_id = '000008e5f679bf7116cb';
-        celestiaConfig.gas_price = 0.1;
-        celestiaConfig.auth_token = '';
-        celestiaConfig.event_channel_size = 100;
-        celestiaConfig.blobstreamx_address = '0xc3e209eb245Fd59c8586777b499d6A665DF3ABD2'
-      }
-    }
     const nodeConfig = prepareNodeConfig({
       chainName: rollupConfig.chainName,
       chainConfig,
@@ -137,6 +124,7 @@ export async function deployRollup({
         is_poster: true,
         rpc: 'http://localhost:26658',
         tendermint_rpc: 'rpc.celestia-mocha.com',
+        eth_rpc: '',
         namespace_id: '000008e5f679bf7116cb',
         gas_price: 0.1,
         auth_token: '',

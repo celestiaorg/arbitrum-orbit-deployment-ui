@@ -1,4 +1,4 @@
-import { NodeConfig } from 'orbit-sdk-celestia';
+import { NodeConfig } from 'celestia-orbit-sdk';
 import { L3Config } from '@/types/L3Config';
 
 // Function to update local storage with new rollup data and l3 data

@@ -1,5 +1,5 @@
 'use client';
-import { CoreContracts } from 'orbit-sdk-celestia';
+import { CoreContracts } from 'celestia-orbit-sdk';
 import { Wallet } from '@/types/RollupContracts';
 import { RollupConfig } from '@/types/rollupConfigDataType';
 import {
@@ -12,7 +12,7 @@ import {
   useRef,
 } from 'react';
 import { useAccount } from 'wagmi';
-import { generateChainId } from 'orbit-sdk-celestia/utils';
+import { generateChainId } from 'celestia-orbit-sdk/utils';
 import { ChainType } from '@/types/ChainType';
 import { RollupConfigFormValues } from '../../app/deployment/step/configure/page';
 
@@ -32,7 +32,7 @@ const generateDefaultRollupConfig: () => RollupConfig = () => ({
   baseStake: 0.1,
   owner: '',
   extraChallengeTimeBlocks: 0,
-  wasmModuleRoot: '0x0754e09320c381566cc0449904c377a52bd34a6b9404432e80afd573b67f7b17',
+  wasmModuleRoot: '0x10c65b27d5031ce2351c719072e58f3153228887f027f9f6d65300d2b5b30152',
   loserStakeEscrow: '0x0000000000000000000000000000000000000000',
   chainId: generateChainId(),
   chainName: 'My Arbitrum L3 Chain',
@@ -49,6 +49,7 @@ const generateDefaultRollupConfig: () => RollupConfig = () => ({
     enable: false,
     rpc: '',
     tendermint_rpc: '',
+    eth_rpc: '',
     namespace_id: '',
     auth_token: '',
     is_poster: false,

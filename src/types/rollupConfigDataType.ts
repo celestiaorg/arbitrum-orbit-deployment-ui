@@ -1,4 +1,4 @@
-import { CelestiaConfig } from "orbit-sdk-celestia";
+import { CelestiaConfig } from "celestia-orbit-sdk";
 
 export type RollupConfig = {
   confirmPeriodBlocks: number;
